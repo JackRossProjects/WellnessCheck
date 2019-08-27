@@ -4,15 +4,16 @@
     <script src="https://unpkg.com/@tensorflow/tfjs"></script>
     <script src="https://unpkg.com/@tensorflow-models/mobilenet"></script>
     <script src="https://unpkg.com/@tensorflow-models/knn-classifier"></script>
+    <link rel="stylesheet" href="index.css">
   </head>
   <body>
     <div id="console"></div>
     <video autoplay playsinline muted id="webcam" width="224" height="224"></video>
     <!-- Toggle hide mood buttons -->
-    <button onclick="hideButtons()">Hide</button>
+    <button class="toggldHide" onclick="hideButtons()">Hide</button>
     <div id="buttons">
-      <button id="class-a">Happy</button>
-      <button id="class-b">Sad</button>
+      <button id="trainHappy" class="trainHappy">Happy</button>
+      <button id="trainSad" class="trainSad">Sad</button>
     </div>
     <!-- Load index.js after the content of the page -->
     <script src="index.js"></script>
