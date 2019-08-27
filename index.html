@@ -8,9 +8,12 @@
   <body>
     <div id="console"></div>
     <video autoplay playsinline muted id="webcam" width="224" height="224"></video>
-    <button id="class-a">Add A</button>
-    <button id="class-b">Add B</button>
-    <button id="class-c">Add C</button>
+    <!-- Toggle hide mood buttons -->
+    <button onclick="hideButtons()">Hide</button>
+    <div id="buttons">
+      <button id="class-a">Happy</button>
+      <button id="class-b">Sad</button>
+    </div>
     <!-- Load index.js after the content of the page -->
     <script src="index.js"></script>
   </body>
