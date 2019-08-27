@@ -33,8 +33,8 @@ async function app() {
   };
 
   // When clicking a button, add an example for that class.
-  document.getElementById('class-a').addEventListener('click', () => addExample(0));
-  document.getElementById('class-b').addEventListener('click', () => addExample(1));
+  document.getElementById('trainHappy').addEventListener('click', () => addExample(0));
+  document.getElementById('trainSad').addEventListener('click', () => addExample(1));
 
 
 
