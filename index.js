@@ -2,9 +2,18 @@ const classifier = knnClassifier.create();
 const webcamElement = document.getElementById('webcam');
 let net;
 
+// Toggle hide mood inout buttons
+function hideButtons(){
+  var x = document.getElementById("buttons");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
 
 async function app() {
-  console.log('Loading mobilenet..');
+  console.log('Loading MoodNet..');
 
   // Load the model.
   net = await mobilenet.load();
@@ -26,7 +35,8 @@ async function app() {
   // When clicking a button, add an example for that class.
   document.getElementById('class-a').addEventListener('click', () => addExample(0));
   document.getElementById('class-b').addEventListener('click', () => addExample(1));
-  document.getElementById('class-c').addEventListener('click', () => addExample(2));
+
+
 
   while (true) {
     if (classifier.getNumClasses() > 0) {
